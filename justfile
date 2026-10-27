@@ -1,0 +1,89 @@
+set windows-shell := ["powershell.exe", "-NoProfile", "-Command"]
+
+default:
+  @just --list
+
+# Lore-check: control-rung coverage, dates, forbidden terms.
+lore:
+  @py -3 tools/lorecheck.py
+
+lore-strict:
+  @py -3 tools/lorecheck.py --strict
+
+# Dry run: show speech chunks without audio.
+declaim-print FILE:
+  @py -3 tools/declaim.py {{FILE}} --print
+
+# Audio version of a chapter (Gemini TTS, needs GOOGLE_API_KEY). Embedded by build_site.
+audio FILE:
+  @py -3 tools/declaim.py {{FILE}} --provider auto --voice Kore --out site/audio/{{file_stem(FILE)}}.wav --no-play
+
+# Build static HTML reader site and EPUB ebook.
+build:
+  @py -3 tools/build_site.py
+
+# Build EPUB ebook directly.
+epub:
+  @py -3 tools/build_epub.py
+
+# Build + serve the book locally (http://localhost:11169/).
+serve PORT="11169":
+  @py -3 tools/build_site.py
+  @py -3 -m http.server {{PORT}} --bind 127.0.0.1 --directory site
+
+# ---- bookkit (shared toolkit, ../bookkit) ----
+bk := "py -3 ../bookkit/bk.py"
+
+# Style check: AI-writer tells, rhythm, readability. Add --llm for an editor's critique.
+critic *ARGS:
+  @{{bk}} critic {{ARGS}}
+
+# Claims ledger of [construction] flags (docs/claims.json). --stale N for unchecked ones.
+claims *ARGS:
+  @{{bk}} claims {{ARGS}}
+
+# Flag count per commit -> docs/burndown.csv
+burndown:
+  @{{bk}} burndown
+
+# Machine translation into chapters_<lang>/ (dry run first!). Example: just translate --lang fr --dry-run
+translate *ARGS:
+  @{{bk}} translate {{ARGS}}
+
+# Reading-level editions. Example: just dumbdown --level kids --dry-run
+dumbdown *ARGS:
+  @{{bk}} dumbdown {{ARGS}}
+
+# Cross-model review. Example: just review --target chapters/04-the-ladder.md --topic ladder --dry-run
+review *ARGS:
+  @{{bk}} review {{ARGS}}
+
+# Dated GitHub evidence snapshot (needs [evidence] in book.toml)
+evidence *ARGS:
+  @{{bk}} evidence {{ARGS}}
+
+# Print PDF, covers, EPUB validation, KDP packages (no upload)
+pdf *ARGS:
+  @{{bk}} pdf {{ARGS}}
+
+# DesignCraft print edition (A4, facing pages, 3 mm bleed)
+print *ARGS:
+  @{{bk}} pdf --engine designcraft {{ARGS}}
+cover *ARGS:
+  @{{bk}} cover {{ARGS}}
+validate:
+  @{{bk}} validate
+publish *ARGS:
+  @{{bk}} publish {{ARGS}}
+
+# Everything at once: evidence, claims, lore, editions, build, validate
+keepcurrent *ARGS:
+  @{{bk}} keepcurrent {{ARGS}}
+
+# Series dashboard across all books + port collision check
+series:
+  @{{bk}} series
+
+# Word count per chapter vs 40k target
+words *ARGS:
+  @{{bk}} words {{ARGS}}

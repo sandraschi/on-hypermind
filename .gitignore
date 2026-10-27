@@ -1,0 +1,13 @@
+# build output + audio/video (regenerated, large)
+site/
+*.wav
+*.mp4
+# python
+__pycache__/
+# secrets
+.env
+# sneak-in backups
+*.bak
+*.bak.*
+
+.cache/

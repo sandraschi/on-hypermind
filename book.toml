@@ -1,0 +1,65 @@
+# bookkit configuration - see D:\Dev\repos\bookkit\README.md
+[book]
+slug = "on-hypermind"
+title = "On Hypermind"
+subtitle = "The Dissolution of the Ego, Exocortices, and the Cognitive Meat-Trap"
+author = "Sandra Schipal"
+identifier = "urn:uuid:7d9e2f4a-3b1c-4e8a-9f0d-5c7a1b2e3f4a"
+language = "en"
+port = 11169
+theme = "violet"
+blurb = "If hyperwar takes the battlefield, takeover takes the economy, hyperart takes the sublime, and metacraft takes the machine - what happens to the biological monkey watching it all? Ten chapters on the exocortex inversion, the end of human epistemology, and synthetic drift."
+
+[chapters]
+dir = "chapters"
+order = [
+  "00-preface.md",
+  "01-exocortex-inversion.md",
+  "02-end-of-epistemology.md",
+  "03-synthetic-drift.md",
+  "04-the-ladder.md",
+  "05-locating-the-present.md",
+  "06-thresholds.md",
+  "07-control-case.md",
+  "08-terminal-states.md",
+  "09-day-two.md",
+  "10-corpus.md",
+  "side-glossary.md",
+  "side-embodiment.md",
+  "side-what-scifi-gets-wrong.md",
+]
+front_matter = ["00-preface.md"]
+expected = [
+  "01-exocortex-inversion.md", "02-end-of-epistemology.md", "03-synthetic-drift.md", "04-the-ladder.md",
+  "05-locating-the-present.md", "06-thresholds.md", "07-control-case.md", "08-terminal-states.md",
+  "09-day-two.md", "10-corpus.md",
+]
+
+[[docs]]
+src = "ASSESSMENT.md"
+out = "assessment.html"
+label = "Assessment"
+index_label = "Strategic Assessment & Methodological Evaluation"
+
+[[docs]]
+src = "REFERENCES.md"
+out = "references.html"
+label = "References"
+index_label = "Scholarly Apparatus & Academic Bibliography"
+
+[lore]
+forbidden = ["skynet", "terminator"]
+rungs = 44
+xids = true
+ascii = true
+
+[translate]
+languages = []
+
+[dumbdown]
+levels = []
+
+[evidence]
+github_orgs = ["storytold"]
+repo_filter = "^(?!artcraft$|placeholder-).*craft$"
+ledger = "chapters/05-locating-the-present.md"
