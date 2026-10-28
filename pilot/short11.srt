@@ -1,0 +1,43 @@
+1
+00:00:00,000 --> 00:00:02,903
+The robot knows where you live. Literally.
+
+2
+00:00:02,983 --> 00:00:05,318
+Not killer robots. Worse. Helpful.
+
+3
+00:00:05,398 --> 00:00:06,952
+Nori rolls the hallway.
+
+4
+00:00:07,032 --> 00:00:10,929
+SaschiRob runs local memory - no cloud trace by default.
+
+5
+00:00:11,009 --> 00:00:13,983
+You forgot the keys. It didn't. It watched.
+
+6
+00:00:14,063 --> 00:00:16,114
+The exocortex just grew hands.
+
+7
+00:00:16,194 --> 00:00:18,742
+Household bots are not a new species.
+
+8
+00:00:18,822 --> 00:00:22,009
+They are your outsourced memory with grippers.
+
+9
+00:00:22,089 --> 00:00:26,768
+When the loop remembers better than you, inversion becomes visible.
+
+10
+00:00:26,848 --> 00:00:28,898
+The robot remembers your keys.
+
+11
+00:00:28,978 --> 00:00:30,825
+You remember approving it.
