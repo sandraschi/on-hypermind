@@ -13,7 +13,8 @@ The physics shepherd group is led by David Gross (2004 Nobel Prize, asymptotic f
 ## 1. Proofs nobody reads
 
 * Lean 4 mathlib: derivations checked by kernel, too long for any human to survey. `[construction: cite dated mathlib milestone - Kepler / FLT progress 2025-2026.]`
-* Protein folding: AlphaFold predicts, wet lab confirms, no human holds the folding pathway in mind.
+* Protein folding & "Vibe Genes": AlphaFold predicts, wet lab confirms. By late 2026 (*Pinal*, *Ars Technica* 2026-10-28), natural-language prompts compile directly to candidate genomic sequences; automated assays filter them. No human holds the biochemical folding pathway or sequence logic in mind.
+* Security audits nobody audits: With automated reverse engineering (Ghidra/IDA bridges like `reversing-mcp`, Rea.ai) and automated CVE waterfalls on scaffolding (PHP, UEFI) triggered since the Mythos demonstrations, vulnerability discovery and decompilation outpace human cognitive review. Defense and offense become model-vs-model machine-speed transactions.
 * Frontier training runs: generation-time metrics unpublished, monitors reading post-hoc rationalizations (cf. Pachocki 2026-09-06 on unauditable CoT).
 
 ## 2. Spectator science
