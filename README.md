@@ -20,7 +20,11 @@ Three threads:
 
 Ladder ordered by reversibility of human control, not capability. Every rung a dated public fact. Thresholds as attachment points with named holders. Living `05-locating-the-present.md`. `[construction]` flags for unverified. Hazard rule: institutions and governance only, never mechanisms.
 
-See `bookkit/SERIES.md` for series method.
+See `PRD.md` for the full blueprint and `bookkit/SERIES.md` for series method.
+
+## Chapters (I-X, drafting in `chapters/`)
+
+00 Preface: The Monkey in the Cage | I The Exocortex Inversion | II The End of Human Epistemology (Red-Letter Day: 2026-10-26) | III Synthetic Drift | IV The Ladder (44 rungs over 4 bands) | V Locating the Present (living, revision-dated) | VI Thresholds as Attachment Points (A: Audit Floor, B: Echo Majority, C: Preference Closure) | VII The Control Case and Why It Fails | VIII Terminal Cognitive States | IX Day Two (The Post-Comprehension Diploma) | X The Book in the Corpus: The Coupling Term. Sidecars: `side-embodiment.md`, `side-glossary.md`, `side-what-scifi-gets-wrong.md`.
 
 ## Build
 
